@@ -1,0 +1,19 @@
+<html>
+<body>
+    <input type="text" id="mobile" placeholder="enter mobile no" autocomplete="off">
+    <input type="text" id="password" placeholder="enter password"  autocomplete="off">
+    <button onclick="myfunction();"> enter</button>
+    <script>
+        function myfunction(){
+       let mobile=document.querySelector("#mobile").value;
+       let password=document.querySelector("#password").value;
+       if( mobile === "8530778599" && password === "123456"){
+          window.location="personal portfolio website project.html";
+       }
+       else{
+        alert("wrong password please try again");
+       }
+    }
+        </script>
+</body>
+</html>

@@ -1,0 +1,1148 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajshree Asole - Portfolio</title>
+
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/9d22d8308c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-image: url('backgroundMain.avif');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            background-image: url('backgroundMain.avif');
+            padding: 10px 0;
+        }
+        .navbar-nav a:hover {
+            box-shadow: 0px 0px 20px rgba(24, 188, 233, 0.8);
+        }
+
+        /* Profile Image */
+        .border {
+            position: absolute;
+            top: 130px;
+            left: 77%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            border: 10px solid cyan;
+            border-radius: 50%;
+            box-shadow: 0px 0px 80px rgba(24, 188, 233, 0.868);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .firstimg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Text Styling */
+        .text-light {
+            font-size: 34px;
+            margin-left: 50px;
+        }
+        h1 {
+            font-size: 54px;
+            margin-left: 50px;
+        }
+        p {
+            font-size: 34px;
+            margin-left: 50px;
+        }
+        /* Social Icons */
+        .icons {
+            margin-left: 50px;
+        }
+        .icons a {
+            font-size: 40px;
+            margin: 10px;
+        }
+        .icons a:hover {
+            box-shadow: 0px 0px 80px rgba(24, 188, 233, 0.868);
+            transition: 0.3s;
+        }
+        /* Button */
+        .btn {
+            border-radius: 20px;
+            background-color: cyan;
+            color: black;
+            padding: 10px 35px;
+            margin-left: 50px;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 80px rgba(24, 188, 233, 0.868);
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .border {
+                position: relative;
+                left: auto;
+                top: 50px;
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            .text-light, h1, p {
+                text-align: center;
+                margin-left: 0;
+            }
+            .icons {
+                text-align: center;
+            }
+            .btn {
+                display: block;
+                margin: 20px auto;
+            }
+        }
+        @media (max-width: 768px) { /* For mobile screens */
+            .border {
+                position: relative;
+                width: 420px;
+                height: 420px;
+                margin: 20px auto 10px; 
+                top:160px;
+                left: 29%;
+                /* Centers image & reduces gap */
+            }
+            .text-light, h1, p {
+                text-align: center;
+                margin-left: 0 !important;
+            }
+            .text-light {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+            h1 {
+                font-size: 28px;
+                margin-top: 5px;
+            }
+            p {
+                font-size: 20px;
+                margin-top: 5px;
+               
+            }
+            .icons {
+                margin-left: auto;
+                margin-top: 10px;
+            }
+            .btn {
+                display: block;
+                margin: 15px auto;
+                padding: 8px 20px;
+                font-size: 18px;
+                border-radius: 25px;
+            }
+        }
+
+
+
+        .profile-containerimg {
+            width: 500px;
+            height: 500px;
+            border: 10px solid cyan;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 80px rgba(24, 188, 233, 0.868);
+            overflow: hidden;
+            margin-left: 5%;
+            margin-right: 0;
+            margin-top: 170px;
+        }
+
+        .profile-containerimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container1 {
+            text-align: left;
+            margin-top: 50px;
+            position: absolute;
+            left: 48%;
+            top: 760px;
+        }
+
+        .btn1 {
+            text-shadow: 5px 5px 10px cyan;
+        }
+
+        .btn {
+            border-radius: 20px;
+            background-color: cyan;
+            color: black;
+            padding: 12px 30px;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+/* Mobile devices (portrait mode) */
+@media (max-width: 768px) {
+    /* Adjust profile image */
+    .profile-containerimg {
+        position: absolute;
+        width: 350px;
+        left: 27%;
+        height: 350px;
+        margin-top: 80px; /* Reduce the vertical space at the top */
+        margin-left: auto;  /* Centers the profile image */
+        margin-right: auto; /* Centers the profile image */
+        margin-bottom: 550px; /* Reduce space between image and text */
+    }
+
+    /* Adjust text container */
+    .container1 {
+        position: absolute;
+        left: 0; /* Align to center */
+        text-align: center; /* Center text horizontally */
+        margin-top: 900px; /* Reduce top margin to bring text closer */
+    }
+
+    .container1 h1 {
+        font-size: 35px;
+    }
+
+    .container1 h3 {
+        font-size: 24px;
+    }
+    .p11{
+        text-align: center;
+    }
+    .p12{
+        text-align: center;
+    }
+
+    .container1 p {
+        font-size: 16px;
+        padding: 0 15px; /* Add horizontal padding to avoid text touching the edges */
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 8px 20px;
+        margin-top: 25px; /* Adjust button position */
+    }
+}
+
+/* Very small screens (mobile in landscape mode or smaller tablets) */
+@media (max-width: 576px) {
+    .profile-containerimg {
+        width: 300px;
+        height: 300px;
+        margin-top: 50px; /* Reduce space between image and text */
+        margin-left: auto; /* Centers the profile image */
+        margin-right: auto; /* Centers the profile image */
+    }
+
+    .container1 {
+        position: absolute;
+        text-align: center; /* Center text */
+        margin-top: 0px;
+         /* Adjust top margin for better spacing */
+    }
+
+    .container1 h1 {
+        font-size: 30px;
+    }
+
+    .container1 h3 {
+        font-size: 22px;
+    }
+
+    .container1 p {
+        font-size: 10px;
+    }
+    .p12{
+        text-align: center;
+    }
+    .p11{
+        text-align: center;
+
+    }
+    .btn {
+        font-size: 14px;
+        padding: 6px 15px;
+        margin-top: 115px; /* Adjust button position */
+    }
+}
+.container4 {
+                position: absolute;
+                margin-top: 200px;
+                left: 35%;
+                text-align: center;
+            }
+
+            .border1, .border2, .border3 {
+                color: white;
+                height: 350px;
+                width: 30%;
+                border: 4px solid darkblue;
+                border-color: aquamarine;
+                border-radius: 20px;
+                box-shadow: 0px 0px 190px rgba(28, 164, 237, 0.868);
+                position: absolute;
+                margin-top: 400px;
+                
+            }
+
+            .border1 {
+                left: 3%;
+                text-shadow: 2px 2px 5px green;
+            }
+
+            .border2 {
+                left: 33%;
+                text-shadow: 2px 2px 5px green;
+            }
+
+            .border3 {
+                left: 63%;
+                text-shadow: 2px 2px 5px green;
+            }
+
+            .border1:hover, .border2:hover, .border3:hover {
+                
+                box-shadow: 0px 0px 190px rgba(220, 225, 227, 0.868);
+            }
+
+            .border1 h1, .border2 h1, .border3 h1 {
+                font-size: 28px;
+                color: greenyellow;
+                font-style: italic;
+                padding-top: 30px;
+            }
+
+            .border1 p, .border2 p, .border3 p {
+                font-size: 20px;
+                padding-top: 40px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+
+
+
+
+              /* Responsive Design for Mobile and Tablet */
+              @media (max-width: 1024px) {
+                .container4 {
+                    left: 10%;
+                    margin-top: 100px;
+                    
+                }
+
+                .border1, .border2, .border3 {
+                    width: 80%;
+                    left: 10%;
+                    margin-top: 150px;
+                }
+
+               
+
+               
+
+                .border1 h1, .border2 h1, .border3 h1 {
+                    font-size: 24px;
+                }
+
+                .border1 p, .border2 p, .border3 p {
+                    font-size: 18px;
+                }
+
+               
+                /* Stacking borders one by one in mobile view */
+                .border1, .border2, .border3 {
+                    position: relative;
+                    margin-top: 30px;
+                    left: 0%;
+                    width: 100%;
+                    box-shadow: 0px 0px 50px rgba(28, 164, 237, 0.868);
+                }
+
+                .border2 {
+                    margin-top: 20px;
+                }
+
+                .border3 {
+                    margin-top: 20px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .container4 {
+                   position: absolute;
+                    margin-top: 0px;
+                    text-align: center;
+                    top:2200px;
+                    left:25%;
+                }
+
+                .border1{
+                    width: 90%;
+                    left: 5%;
+                    margin-top: 1200px;
+                    
+                }
+ 
+                .border2{
+                    width: 90%;
+                    left: 5%;
+                    margin-top: 60px;
+                    
+                }
+
+                 .border3 {
+                    width: 90%;
+                    left: 5%;
+                    margin-top: 60px;
+                    
+                }
+
+              
+
+                .border1 h1, .border2 h1, .border3 h1 {
+                    font-size: 20px;
+                }
+
+                .border1 p, .border2 p, .border3 p {
+                    font-size: 16px;
+                }
+
+               
+            }
+
+            @media (max-width: 480px) {
+                .container4 {
+                    left: 5%;
+                    margin-top: 40px;
+                    text-align: center;
+                }
+
+                .border1, .border2, .border3 {
+                    width: 95%;
+                    left: 2%;
+                    margin-top: 150px;
+                }
+
+                
+               
+
+                .border1 h1, .border2 h1, .border3 h1 {
+                    font-size: 18px;
+                }
+
+                .border1 p, .border2 p, .border3 p {
+                    font-size: 14px;
+                }
+
+               
+            }
+            .container5{
+            position: absolute;
+            margin-top: 1200px;
+            left:35%;
+           }
+           .border4 {
+            position: absolute;
+            left:3%;
+            margin-top: 200px;
+            color:white;
+            height:300px;
+            width: 30%;
+            border:4px solid darkblue;
+            border-color: aquamarine;
+            border-radius: 20px;
+            box-shadow: 0px 0px 190px rgba(28, 164, 237, 0.868);
+           }
+           #t1{
+            position: absolute;
+            left:5%;
+            font-size: 30px;
+            color:White;
+            text-decoration: underline;
+           }
+           #par1{
+            position: absolute;
+            margin-left: 50%;
+           }
+           .border5 {
+            position: absolute;
+            left:3%;
+            margin-top: 1400px;
+            color:white;
+            height:500px;
+            width: 40%;
+           }
+           .p1{
+            position:absolute;
+            margin-top:1313px;
+            left: 10%;
+            font-size: 40px;
+           }
+           .text{
+            position: absolute;
+            margin-top: 12px;
+            margin-left: 50px;
+            font-size: 25px;
+           }
+           .text1{
+            position: absolute;
+            margin-top: 112px;
+            margin-left: 50px;
+            font-size: 25px;
+           }
+          
+           .text2{
+            position: absolute;
+            margin-top: 12px;
+            margin-left: 50px;
+            font-size: 25px;
+           }
+           .text3{
+            position: absolute;
+            margin-top: 12px;
+            margin-left: 50px;
+            font-size: 25px;
+           }
+           .text4{
+            position: absolute;
+            margin-top: 12px;
+            margin-left: 50px;
+            font-size: 25px;
+           }
+           .text5{
+            position: absolute;
+            margin-top: 12px;
+            margin-left: 50px;
+            font-size: 25px;
+           }
+           
+           .p2{
+            position:absolute;
+            margin-top:1322px;
+            left: 60%;
+            font-size: 40px;
+           }
+           .border6 {
+            position: absolute;
+            border: 2px solid cyan;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 1000px;
+            width: 80%;
+          top:0px;
+            left:100%;
+            margin-left: 200px;
+            height: 360px;
+            
+            
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 18px;
+            padding: 9px;
+         
+        }
+        
+        .progress {
+            height: 10px;
+        }
+        .progress-bar {
+            font-weight: bold;
+            line-height: 20px;
+            color: white;
+            transition: width 1.5s ease-in-out;
+        }
+        
+            @media (max-width: 768px) {
+            .container5{
+                position:absolute ;
+                text-align: center;
+                top:2530px
+            }
+             .p1{
+                position: absolute;
+                text-align: center;
+                top:2590px;
+                text-shadow: 2px 2px 5px cyan;
+                left: 34%;
+
+            }
+            .border5{
+                position: absolute;
+                top: 2600px;
+                left:10%;
+                width: 700px;
+            }
+             .p2{
+                position: absolute;
+                text-align: center;
+                margin-top: 902px;
+                text-align: center;
+                left: 28%;
+                text-shadow: 2px 2px 5px cyan;
+            }
+            .border6{
+                position: absolute;
+                top: 540px;
+                text-align: center;
+                left:0%;
+                width: 550px;
+                margin-left: 1px;
+            }
+
+        }
+       
+
+         /* Projects Heading (Absolute Position) */
+         .container10 {
+            position: absolute;
+            top: 560px; /* Adjust as needed */
+            left: 700px;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 80%;
+        }
+
+        /* Project Gallery Container (Absolute Position) */
+        
+        .gallery-container {
+    position: absolute;
+    top: 700px; /* Adjust as needed */
+    left: 30px; /* Adjust as needed */
+    width: 1200px; /* Ensure enough space for three columns */
+    height: 800px; /* Adjust for spacing */
+}
+
+.gallery-box {
+    position: absolute;
+    width: 420px; /* Adjust size */
+    height: 350px; /* Adjust size */
+    border: 2px solid cyan;
+
+}
+
+/* First Row */
+.gallery-box:nth-child(1) { top: 50px; left: 0px;
+}  /* First box */
+.gallery-box:nth-child(2) { top: 50px; left: 470px; } /* Second box */
+.gallery-box:nth-child(3) { top: 50px; left: 930px; } /* Third box */
+
+/* Second Row */
+.gallery-box:nth-child(4) { top: 470px; left: 0px; } /* Fourth box */
+.gallery-box:nth-child(5) { top: 470px; left: 470px; } /* Fifth box */
+.gallery-box:nth-child(6) { top: 470px; left: 930px; } /* Sixth box */
+
+        .gallery-box:hover {
+            box-shadow: 0px 0px 20px cyan;
+        }
+
+        /* Image Styling */
+        .custom-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Responsive Text Overlay */
+        .text-overlay {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 1.8rem;
+            font-style: italic;
+            text-shadow: 2px 2px 15px cyan;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            top: 150px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container10{
+                position: absolute;
+                top:1100px;
+                left: 300px;
+                
+
+            }
+            .container10 h1{
+                font-size: 60px;
+            }
+            .gallery-container{
+                position: absolute;
+                top:1300px;
+                left: 0;
+            }
+            
+    .gallery-box {
+        position: absolute;  /* Remove absolute positioning */
+        width: 300px;  /* Default: Full width for single column */
+        height: auto;
+        margin-bottom: 25px;  /* Spacing between boxes */
+    }
+
+    /* Custom Positioning for Each Box */
+    .gallery-box:nth-child(1) { width: 50%;
+        height: 290px;
+        top:0px;
+        left: 10px;
+     } /* Full width */
+    .gallery-box:nth-child(2) { width: 50%;
+    top:310px; 
+left: 10px;
+height: 310px;} /* Full width */
+    .gallery-box:nth-child(3) { width: 50%;
+        top:650px; 
+        left: 10px;
+        height: 340px;
+    } /* Full width */
+    
+    .gallery-box:nth-child(4) { width: 50%; 
+        top:1020px; 
+        left: 10px;
+        height: 340px;
+    } /* Full width */
+    .gallery-box:nth-child(5) { width: 50%; 
+        top:1390px; 
+        left: 10px;
+        height: 340px;
+    } /* Full width */
+    .gallery-box:nth-child(6) {
+        width:50%; 
+        top:1760px; 
+        left: 10px;
+        height: 340px;
+        /* Full width again */
+    }
+
+    /* Ensuring images resize properly */
+    .custom-image {
+        width: 100%;
+        height: auto;
+    }
+}
+.container18 {
+    position: absolute;
+    margin-top: 1340px;
+    left: 50%;
+    font-size: 56px;
+}
+
+/* Contact Border Box */
+.border13 {
+    position: absolute;
+    border: 3px solid cyan;
+    margin-top: 1480px;
+    height: 390px;
+    width: 730px;
+    margin-left: 30px;
+}
+
+/* Form Styling */
+.form-group {
+    position: absolute;
+    margin-top: 1420px;
+    left: 800px;
+    width: 600px;
+}
+
+/* Make the Page Responsive */
+@media (max-width: 768px) {
+    /* Adjust Contact Title */
+    .container18 {
+        position: absolute;
+        font-size: 52px;
+        left: 8%;
+        text-align: center;
+        width: 80%;
+        margin-top: 3200px;
+      
+    }
+
+    /* Adjust Contact Box */
+    .border13 {
+        position: absolute;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        padding: 15px;
+        margin-top: 3400px;
+    }
+
+    /* Form Styling */
+    .form-group {
+        position: absolute;
+        width: 90%;
+        margin: 20px auto;
+        left: 20px;
+        margin-top: 3900px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Icons */
+    .fa-brands {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    /* Reduce font sizes */
+    p {
+        font-size: 16px;
+    }
+}
+
+ 
+
+
+
+
+</style>
+                 <!--email verification-->
+                 <script type="text/javascript"
+                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+             </script>
+             <script type="text/javascript">
+             (function(){
+               emailjs.init({
+                 publicKey: "1XX2tDPXem1Zv-48B",
+               });
+             })();
+             </script>
+              <!--email verification-->
+    </head>
+
+           
+
+        
+     
+
+        
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand text-white ml-3" href="#" style="font-size: 35px;margin-left: 60px">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-white" href="#" style="font-size: 25px; padding:20px;">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#demo33" style="font-size: 25px; padding:20px;">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#demo22" style="font-size: 25px; padding:20px;">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#demo44" style="font-size: 25px; padding:20px;">Skills</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#projects" style="font-size: 25px; padding:20px;">Projects</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#demoFinal1" style="font-size: 25px; padding:20px;">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="border">
+        <img src="p1.jpg" class="firstimg" alt="Rajshree Asole">
+    </div>
+
+    <div class="text-light" style="margin-top: 200px; font-size: 34px;" >Hello, It's Me</div>
+    <h1 class="text-light" style="margin-top: 0px; font-size: 54px;">Rajshree Asole</h1>
+    <p class="text-light" style=" font-size: 34px; " >And I'm a <b style="color: cyan;">Front-End Developer</b></p>
+
+    <div class="text-light ml-5 " style=" font-size: 27px; margin-left: 50px;">I'm a web Designer with extensive experience for over 3 years.<br>
+        expertise is to create and website design, Frontend design, and<br>
+         many more....
+   </div>
+    
+    <!-- Social Icons -->
+    <div class="icons mt-3">
+        <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp" ></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" style="margin-left: 10px;"></i></a>
+        <a href="https://www.linkedin.com/in/rajshree-asole-2b43282ba/" style="margin-left: 25px;"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+
+    <!-- Button -->
+    <button class="btn mt-4">
+        <b>More About Me</b>
+    </button>
+
+
+    <div id="demo33"></div>
+        <div class="profile-containerimg">
+            <img src="p1.jpg" alt="Profile Image">
+        </div>
+
+        <div class="container1">
+            <div class="p11" style="font-size: 60px;margin-left: 7%;">About <b style="color:cyan;margin-top: 80px;;">Me</b></div>
+            <br>
+            <div class="p12" style="font-size: 30px; margin-left: 6%;"><b>Full Stack Developer</b></div>
+            <br>
+            <p style="font-size: 24px;">
+                I am a motivated diploma student of Computer Engineering, passionate about software development and problem-solving.<br>
+                I have hands-on experience with Machine Learning. I am eager to apply my skills in real-world projects. Continuously learning <br>and growing, I aim to build a strong foundation in Full-Stack Development and contribute to impactful software solutions.
+            </p>
+            <button class="btn mt-4">
+                <b>More About Me</b>
+            </button>
+        </div>
+        
+
+
+
+    
+        <div class="container4">
+            <h1 style="font-size: 60px; text-align: center; color:cyan"><b style="color:white">My</b> Services</h1>
+        </div>
+        <div class="border1">
+            <h1 class="text pt-5" style="padding-left:30px;font-size: 40px; ">Web Developer  <i class="fa-solid fa-angles-up" style="color: #65e690;"></i></h1>
+            <p class="text text-light pl-3" style="font-size: 20px; padding-top: 120px;">I am a Web Developer skilled in designing and building dynamic, user-friendly websites and web applications...</p>
+        </div>
+        <div id="demo22"></div>
+        <div class="border2">
+            <h1 class="text pt-5" style="padding-left:100px;font-size: 40px; ">UI/UX  <i class="fa-solid fa-angles-up" style="color: #65e690;"></i></h1>
+            <p class="text text-light pl-3" style="font-size: 20px; padding-top: 120px;">UI/UX Design: Skilled in creating intuitive and user-centered
+                 designs . Experienced in designing responsive and interactive interfaces
+                  
+                   </p>
+        </div>
+        <div class="border3">        
+            <h1 class="text pt-5" style="padding-left:10px;font-size: 40px; ">Code Collaborate <i class="fa-solid fa-angles-up" style="color: #65e690;"></i></h1>
+            <p class="text text-light pl-3" style="font-size: 20px; padding-top: 120px;"> Proficient in Git and GitHub for version control, managing repositories, and collaborating on projects </p>
+        </div>
+ 
+        
+        <div class="container5">
+            <div id="demo44"></div>
+            <h1 style="font-size: 60px; text-align: center; color:cyan"><b style="color:white; height: 40px;">My</b> Skills</h1>
+        </div>
+        <div  class="p1" style="color:white;">Technical Skills</div>
+       
+        <div  class="p2" style="color:white;">Professional Skills</div>
+        
+        <div class="border5">
+            <div class="text  mb-0" style="color:white ;margin-top: 10px;">HTML</div>
+           
+            <div class="progress mt-5 ml-5 w-75" style="height: 7px;background-color: black;">
+                
+                <div id="progress-bar1" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%; background-color: cyan;color:black">0%</div>
+               
+            </div>
+          
+            
+             
+              
+              <div class="text1 mb-0" style="color:white ;margin-top: 10px;">CSS</div>
+              <div class="progress mt-5 ml-5 w-75" style="height: 7px;background-color: black;">
+                <div id="progress-bar2" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%; background-color: cyan;color:black">0%</div>
+              </div>
+            
+             
+              <div class="text2  mb-0" style="color:white ;margin-top: 10px;">Bootstrap</div>
+              <div class="progress mt-5 ml-5 w-75" style="height: 7px;background-color: black;">
+                <div id="progress-bar3" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%; background-color: cyan;color:black">0%</div>
+              </div>
+              
+              <div class="text3  mb-0" style="color:white ;margin-top: 10px;">Javascript</div>
+              <div class="progress mt-5 ml-5 w-75" style="height: 7px;background-color: black;">
+                <div id="progress-bar4" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%; background-color: cyan;color:black">0%</div>
+              </div>
+          
+              <div class="text4 mb-0" style="color:white ;margin-top: 10px;">Machine Learning</div>
+              <div class="progress mt-5 ml-5 w-75" style="height: 7px;background-color: black;">
+                <div id="progress-bar5" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%; background-color: cyan;color:black">0%</div>
+              </div>
+              
+              <div class="text5  mb-0" style="color:white ;margin-top: 10px;">Advance Java</div>
+              <div class="progress mt-5 ml-5 w-75" style="height: 7px;background-color: black;">
+                <div id="progress-bar6" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%; background-color: cyan;color:black">0%</div>
+              </div>
+             
+              
+              
+             
+              <script>
+                // Function to animate each progress bar
+                function animateProgressBar(id, targetWidth, speed) {
+                  let progressBar = document.getElementById(id);
+                  let width = 0;
+                  let interval = setInterval(function() {
+                    if (width >= targetWidth) {
+                      clearInterval(interval); // Stop the animation at the target width
+                    } else {
+                      width++;
+                      progressBar.style.width = width + "%";
+                      progressBar.innerHTML = width + "%";
+                    }
+                  }, speed);
+                }
+                // Start animating the progress bars with different speeds and target widths
+                animateProgressBar("progress-bar1", 100, 10); // 70% width with 50ms interval
+                animateProgressBar("progress-bar2", 100, 10); // 85% width with 40ms interval
+                animateProgressBar("progress-bar3", 100, 10); // 60% width with 60ms interval
+                animateProgressBar("progress-bar4", 40, 10); // 90% width with 45ms interval
+                animateProgressBar("progress-bar5", 70, 10);
+                animateProgressBar("progress-bar6", 86,10);
+                
+        </script>
+        
+       
+        <div class="border6">
+          <div class="skill-item">Communication</div>
+<div class="progress">
+    <div class="progress-bar bg-success" style="width: 85%;"></div>
+</div>
+
+<div class="skill-item">Problem Solving</div>
+<div class="progress">
+    <div class="progress-bar bg-info" style="width: 90%;"></div>
+</div>
+
+<div class="skill-item">Teamwork</div>
+<div class="progress">
+    <div class="progress-bar bg-warning" style="width: 80%;"></div>
+</div>
+
+<div class="skill-item">Leadership</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" style="width: 75%;"></div>
+</div>
+        </div>
+        
+
+
+        <div  class="container10">
+            <h1>Latest<b style="color:cyan;font-size: 60px;"> Projects</b></h1>
+        </div>
+    
+        <!-- Projects Gallery -->
+         <div id="projects"></div>
+        <div class="gallery-container">
+            <!-- Project 1 -->
+            <div class="gallery-box">
+                <a href="E:\Projects list Rajshree All\Gaming Website project\final project gaming portfolio.html">
+                    <img src="c1.webp" class="custom-image">
+                    <div class="text-overlay">Gammers Destiny</div>
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="gallery-box">
+                <a href="E:\Projects list Rajshree All\Bouque Website\Bouque1.html">
+                    <img src="c2.jpg" class="custom-image">
+                    <div class="text-overlay">Flowers Bouquet Portal</div>
+                </a>
+            </div>
+            <!-- Project 3 -->
+            <div class="gallery-box">
+                <a href="E:\Projects list Rajshree All\lawyer website project\Final project lawyer portfolio.html">
+                    <img src="c3.png" class="custom-image">
+                    <div class="text-overlay">Lawyer Portfolio</div>
+                </a>
+            </div>
+    
+            <!-- Additional Project 4 -->
+            <div class="gallery-box">
+                <a href="E:\Projects list Rajshree All\Thapa  technical Javascript\gradient generator project.html">
+                    <img src="v1.jpeg" class="custom-image">
+                    <div class="text-overlay">Color Gradient Generator</div>
+                </a>
+            </div>
+            <!-- Additional Project 5 -->
+            <div class="gallery-box">
+                <a href="E:\Projects list Rajshree All\Thapa  technical Javascript\calculator.html">
+                    <img src="v2.jpeg" class="custom-image">
+                    <div class="text-overlay">Calculator</div>
+                </a>
+            </div>
+            <!-- Additional Project 6 -->
+            <div class="gallery-box">
+                <a href="E:\Projects list Rajshree All\Thapa  technical Javascript\Bmi.html">
+                    <img src="v3.jpeg" class="custom-image">
+                    <div class="text-overlay">BMI Calculator</div>
+                </a>
+            </div>
+        </div>
+       
+        <body>
+            <div id="demoFinal">
+            <div class="container18">
+              <p id="r11" style="font-size: 46px;">Contact <b style="color:cyan">Me</b></p>
+            </div>
+            </div>
+            
+            <div class="border13">
+              <p style="color:white;font-size: 35px;">Let's Work Together</p>
+              <div id="demoFinal1"></div>
+              <p style="color:white;font-size: 20px;">Hope Together we will  achieve All our gools which will satisfy our need and will make our future bright; So Let's Start Together , Rise Together, and Achieve Together</p>
+             
+              <p style="color:white;font-size: 20px;"> <span> <i class="fa-solid fa-share" style="color: #74C0FC;"></i></span> <b style="color:cyan;">Contact</b>: rajshreeasole380@gmail.com</p>
+            <p style="color:white;font-size: 20px;" ><SPAN> <i class="fa-solid fa-phone" style="color: #74C0FC;"></i></SPAN> 8530778599</p>
+            <br>
+            
+            <p><span></span>
+            <span></span>
+            <span></span>
+            
+            <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"  ></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" style="margin-left: 10px;" ></i></a>
+            <a href="https://www.linkedin.com/in/rajshree-asole-2b43282ba/" style="margin-left: 10px;" ><i class="fa-brands fa-linkedin"></i></a>
+            </p>
+          </div>
+
+              <div class="form-group  h-40" style="width: 600px;" >
+                <input class="form-control" type="text" id="name" placeholder="Enter Your Name" style="height: 50px; color:gray;background-color:lightgray;">
+                <input class="form-control mt-3" type="text" id="phone" placeholder="Enter Your phone" style="height: 50px; color:gray;background-color:lightgray;">
+                <input class="form-control mt-3" type="text" id="email" placeholder="Enter Your email" style="height: 50px; color:gray;background-color:lightgray;">
+                <textarea class="form-control mt-3 pt-0"  id="message" placeholder="Enter Your Message" style="height: 250px; color:black;background-color:white;"></textarea>
+                <button class="btn1 btn-block mt-3"   style="color:black;background-color: aqua;border-radius: 10px; padding-top: 10px; padding-bottom: 10px;" onclick="sendMail(event)" >Send Email</button>
+               
+
+
+                <p style="color:transparent"> </p>
+              </div>
+            </div>
+          </div>
+</body>
+<script src="email veri.js"></script>
+</html>
+
