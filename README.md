@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio Website
+# 🌐 Personal Portfolio Website.
 
 This is my personal portfolio website showcasing my skills, projects, and experience in web development and technology. The website highlights my work, technical expertise, and provides a way for people to connect with me.
 
